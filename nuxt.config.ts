@@ -17,6 +17,6 @@ export default defineNuxtConfig({
   },
 
   runtimeConfig: {
-    IPREGISTRY_API_KEY: process.env.IPREGISTRY_API_KEY,
+    ipregistryApiKey: process.env.NUXT_IPREGISTRY_API_KEY,
   },
 });

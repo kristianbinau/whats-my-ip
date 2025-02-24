@@ -197,12 +197,12 @@ export const cachedRegistryInfo = defineCachedFunction(
 function getIPRegistryApiKey(event: H3Event): string {
   const config = useRuntimeConfig(event);
 
-  if (!config.IPREGISTRY_API_KEY) {
+  if (!config.ipregistryApiKey) {
     throw createError({
       statusCode: 500,
-      statusMessage: "Missing IPREGISTRY_API_KEY",
+      statusMessage: "Missing ipregistryApiKey",
     });
   }
 
-  return config.IPREGISTRY_API_KEY;
+  return config.ipregistryApiKey;
 }
