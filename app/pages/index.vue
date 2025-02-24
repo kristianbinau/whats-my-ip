@@ -1,30 +1,33 @@
 <template>
   <div class="flex flex-col items-center justify-center gap-4 h-screen">
     <h1>Your IP address: {{ ip }}</h1>
-    <p>
-      Your Location: <span>{{ location }}</span>
-    </p>
-    <p>
-      Your Provider: <span>{{ provider }}</span>
-    </p>
+    
+    <template v-if="registryInfo">
+      <p>
+        Your Location: <span>{{ location }}</span>
+      </p>
+      <p>
+        Your Provider: <span>{{ provider }}</span>
+      </p>
 
-    <div class="flex gap-2">
-      <UBadge
-        v-if="isVPN"
-        icon="i-lucide-network"
-        color="warning"
-        variant="outline"
-        >VPN Connection</UBadge
-      >
+      <div class="flex gap-2">
+        <UBadge
+          v-if="isVPN"
+          icon="i-lucide-network"
+          color="warning"
+          variant="outline"
+          >VPN Connection</UBadge
+        >
 
-      <UBadge
-        v-if="isProxy"
-        icon="i-lucide-network"
-        color="info"
-        variant="outline"
-        >Proxy Connection</UBadge
-      >
-    </div>
+        <UBadge
+          v-if="isProxy"
+          icon="i-lucide-network"
+          color="info"
+          variant="outline"
+          >Proxy Connection</UBadge
+        >
+      </div>
+    </template>
   </div>
 </template>
 
