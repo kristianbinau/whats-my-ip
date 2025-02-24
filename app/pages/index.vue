@@ -1,7 +1,10 @@
 <template>
   <div class="flex flex-col items-center justify-center gap-4 h-screen">
-    <h1>Your IP address: {{ ip }}</h1>
-    
+    <h1>
+      Your IP address:
+      <span class="text-(--ui-primary)">{{ ip }}</span>
+    </h1>
+
     <template v-if="registryInfo">
       <p>
         Your Location: <span>{{ location }}</span>
@@ -16,16 +19,16 @@
           icon="i-lucide-network"
           color="warning"
           variant="outline"
-          >VPN Connection</UBadge
-        >
+          label="VPN Connection"
+        />
 
         <UBadge
           v-if="isProxy"
           icon="i-lucide-network"
           color="info"
           variant="outline"
-          >Proxy Connection</UBadge
-        >
+          label="Proxy Connection"
+        />
       </div>
     </template>
   </div>
