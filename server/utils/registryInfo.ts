@@ -1,10 +1,10 @@
 import type { H3Event } from "h3";
 import {
   ApiError,
-  ApiResponse,
   ClientError,
-  IpInfo,
   IpregistryClient,
+  type ApiResponse,
+  type IpInfo,
 } from "@ipregistry/client";
 
 export const cachedRegistryInfo = defineCachedFunction(
